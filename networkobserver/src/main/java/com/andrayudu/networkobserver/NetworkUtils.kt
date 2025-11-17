@@ -1,9 +1,11 @@
 package com.andrayudu.networkobserver
 
 
+import android.Manifest
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import androidx.annotation.RequiresPermission
 
 object NetworkUtils {
 

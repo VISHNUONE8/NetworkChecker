@@ -4,20 +4,10 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
+import android.net.NetworkRequest
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
-
-enum class NetworkStatus {
-    AVAILABLE,
-    LOST
-}
-
-
-enum class OfflineViewMode {
-    BANNER,
-    FULLSCREEN
-}
 
 object NetworkObserver {
 
@@ -35,7 +25,7 @@ object NetworkObserver {
             }
         }
 
-        val request = android.net.NetworkRequest.Builder()
+        val request = NetworkRequest.Builder()
             .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
             .build()
 
@@ -46,4 +36,3 @@ object NetworkObserver {
         }
     }
 }
-
