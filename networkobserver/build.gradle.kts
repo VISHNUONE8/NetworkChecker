@@ -33,6 +33,8 @@ android {
         jvmTarget = "11"
     }
 }
+group = "com.github.VISHNUONE8"
+version = "1.0.0"
 
 dependencies {
     implementation(libs.androidx.core.ktx)
